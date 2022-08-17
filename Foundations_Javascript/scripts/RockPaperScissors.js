@@ -1,3 +1,11 @@
+let machineWins = 0;
+let humanWins = 0;
+let ties = 0;
+
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors";
+
 function getComputerChoice() {
   const rand = Math.random(); //Returns a random
   if (rand <= 0.33) {
@@ -8,28 +16,29 @@ function getComputerChoice() {
   return "scissors";
 }
 
-let playerChoice = "rock";
-
 function playRound(computerChoice, playerChoice) {
+  const victorNode = document.createElement("h1");
+  const humanMsg = document.createTextNode("Human Victory");
+  const robotMsg = document.createTextNode("Robot Victory");
+  const tieMsg = document.createTextNode("No Victory");
+
   switch (true) {
     case computerChoice === playerChoice:
-      return 0;
+      victorNode.appendChild(tieMsg);
       break;
     case computerChoice === "rock" && playerChoice === "paper":
     case computerChoice === "scissors" && playerChoice === "rock":
     case computerChoice === "paper" && playerChoice === "scissors":
-      return 2;
+      victorNode.appendChild(humanMsg);
+
       break;
 
     default:
-      return 1;
+      victorNode.appendChild(robotMsg);
   }
+  document.querySelector("#areyawinningson").appendChild(victorNode);
 }
-
-let machineWins = 0;
-let humanWins = 0;
-let ties = 0;
-
+// console.log(machineWins, ties, humanWins)
 // for (let i = 0; i < 5; i++) {
 //   const result = playRound(getComputerChoice(), prompt());
 //   switch (true) {
@@ -43,4 +52,3 @@ let ties = 0;
 //       ties++;
 //   }
 // }
-console.log(machineWins, humanWins, ties);

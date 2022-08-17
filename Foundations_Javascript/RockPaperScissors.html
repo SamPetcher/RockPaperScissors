@@ -10,10 +10,30 @@
   </head>
   <body>
     <div id="main-grid">
-
-      <button class="weapon-choice" id="rock" onclick="">Rock</button>
-      <button class="weapon-choice"id="paper">Paper</button>
-      <button class="weapon-choice" id="scissors">Scissors</button>
+      <div id="areyawinningson">
+        
+      </div>
+      <button
+        class="weapon-choice"
+        id="rock"
+        onclick="playRound(getComputerChoice(), rock)"
+      >
+        Rock
+      </button>
+      <button
+        class="weapon-choice"
+        id="paper"
+        onclick="playRound(getComputerChoice(), paper)"
+      >
+        Paper
+      </button>
+      <button
+        class="weapon-choice"
+        id="scissors"
+        onclick="playRound(getComputerChoice(), scissors)"
+      >
+        Scissors
+      </button>
     </div>
   </body>
 </html>

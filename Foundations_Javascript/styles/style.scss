@@ -1,11 +1,20 @@
 #main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
   align-items: center;
   justify-items: center;
   width: 50vw;
   height: 50vh;
   background-color: hsl(0, 0%, 80%);
+}
+
+#areyawinningson {
+    background-color: hsl(120, 50%, 90%);
+    width: 100%;
+    height: 100%;
+    grid-column: span 3;
 }
 
 .weapon-choice {
