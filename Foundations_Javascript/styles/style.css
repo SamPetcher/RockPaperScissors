@@ -1,0 +1,16 @@
+#main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 50vw;
+  height: 50vh;
+  background-color: hsl(0deg, 0%, 80%);
+}
+
+.weapon-choice {
+  background-color: hsl(0deg, 0%, 80%);
+  width: 70%;
+}
+
+/*# sourceMappingURL=style.css.map */
